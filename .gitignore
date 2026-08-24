@@ -1,0 +1,9 @@
+(
+echo node_modules/
+echo dist/
+echo .env
+echo .env.local
+echo *.mp4
+echo *.mov
+echo *.webm
+) > .gitignore

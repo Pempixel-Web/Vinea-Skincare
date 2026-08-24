@@ -1,0 +1,180 @@
+.ugc__carousel-wrap {
+  position: relative;
+}
+
+.ugc__viewport {
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  padding-bottom: 4px;
+}
+
+.ugc__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.ugc__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+
+.ugc__track.has-transition {
+  transition: transform 0.38s ease;
+}
+
+.ugc__card {
+  flex: 0 0 auto;
+  width: min(220px, 62vw);
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .ugc__card {
+    width: 240px;
+  }
+}
+
+.ugc__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--ink);
+  cursor: pointer;
+}
+
+.ugc__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 5-star rating, top left */
+.ugc__rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 2px;
+  padding: 4px 6px;
+  border-radius: 999px;
+  background: rgba(22, 32, 26, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.ugc__star {
+  width: 11px;
+  height: 11px;
+  fill: var(--clay);
+}
+
+/* fat circular play button, centered */
+.ugc__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(246, 242, 233, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -8px rgba(22, 32, 26, 0.55);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.ugc__play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.ugc__play-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--forest);
+  margin-left: 3px;
+}
+
+.ugc__play-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+/* name + description overlay, bottom, like a reel caption */
+.ugc__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 12px 12px;
+  background: linear-gradient(to top, rgba(16, 22, 18, 0.85) 0%, rgba(16, 22, 18, 0.35) 55%, transparent 100%);
+  z-index: 1;
+}
+
+.ugc__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+  margin: 0;
+}
+
+.ugc__desc {
+  margin: 3px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(246, 242, 233, 0.88);
+}
+
+.ugc__nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ugc__nav-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--stone-line);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--forest);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+}
+
+.ugc__nav-btn:hover {
+  background: var(--stone);
+  border-color: var(--moss);
+}
+
+.ugc__nav-btn:active {
+  transform: scale(0.94);
+}
+
+.ugc__nav-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ugc__footnote {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--moss);
+  font-style: italic;
+}

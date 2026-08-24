@@ -1,0 +1,53 @@
+.droplet-motif {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--stone-line);
+  box-shadow: 0 24px 60px -20px rgba(22, 32, 26, 0.35);
+}
+
+@media (min-width: 860px) {
+  .droplet-motif {
+    aspect-ratio: 1 / 1;
+  }
+}
+/* .droplet-motif {
+  width: 100%;
+  height: auto;
+}
+
+.droplet-motif__drop {
+  animation: droplet-fall 2.6s ease-in-out infinite;
+  transform-origin: 100px 96px;
+}
+
+@keyframes droplet-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(60px);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .droplet-motif__drop {
+    animation: none;
+    opacity: 1;
+  }
+} */

@@ -1,0 +1,28 @@
+:root {
+  /* --- Color: natural green + sophisticated neutral, no purple/terracotta cliché --- */
+  --ink: #16201a;              /* near-black, warmed with green — primary text */
+  --forest: #24352a;           /* deep forest green — primary brand, headers, CTA */
+  --forest-deep: #16241b;      /* darker forest for hover/final CTA section bg */
+  --moss: #5c6e4f;             /* mid moss green — secondary accent, icons */
+  --sage: #a8b799;             /* light sage — subtle accents, dividers on dark */
+  --bone: #f6f2e9;             /* warm ivory — primary background */
+  --stone: #ece5d4;            /* secondary surface — cards, alt sections */
+  --stone-line: #ddd3ba;       /* hairline borders on bone/stone */
+  --clay: #a97f52;             /* muted ochre/clay — sparing warm accent (ratings, quote marks) */
+  --paper: #fffdf8;            /* lightest surface, form fields on stone */
+
+  /* --- Type --- */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* --- Radius & shadow: understated, not "rounded card" default --- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --shadow-soft: 0 1px 2px rgba(22, 32, 26, 0.06), 0 8px 24px -12px rgba(22, 32, 26, 0.18);
+
+  /* --- Layout --- */
+  --content-max: 1180px;
+  --content-narrow: 760px;
+  --gutter: clamp(20px, 5vw, 64px);
+}

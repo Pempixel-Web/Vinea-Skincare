@@ -1,0 +1,33 @@
+.instagram-cta {
+  background: var(--stone);
+  padding-block: clamp(48px, 7vw, 80px);
+  border-top: 1px solid var(--stone-line);
+  border-bottom: 1px solid var(--stone-line);
+}
+
+.instagram-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+@media (min-width: 760px) {
+  .instagram-cta__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .instagram-cta__inner > div {
+    max-width: 560px;
+  }
+}
+
+.instagram-cta__inner h2 {
+  margin-block: 10px 12px;
+}
+
+.instagram-cta__btn {
+  white-space: nowrap;
+}

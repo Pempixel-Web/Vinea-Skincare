@@ -1,0 +1,30 @@
+.solution__grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .solution__grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 40px;
+  }
+}
+
+.solution__visual {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+@media (min-width: 860px) {
+  .solution__visual {
+    max-width: none;
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+.solution__copy p + p {
+  margin-top: 14px;
+}

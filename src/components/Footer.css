@@ -1,0 +1,24 @@
+.footer {
+  background: var(--forest-deep);
+  color: var(--sage);
+  padding-block: 32px;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__brand {
+  font-family: var(--font-display);
+  color: var(--bone);
+  font-size: 1rem;
+}
+
+.footer__disclaimer {
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 70ch;
+  color: var(--sage);
+}

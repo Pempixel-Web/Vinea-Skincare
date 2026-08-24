@@ -1,0 +1,288 @@
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: var(--forest);
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--narrow {
+  max-width: var(--content-narrow);
+}
+
+.section {
+  padding-block: clamp(56px, 9vw, 108px);
+}
+
+.section--stone {
+  background: var(--stone);
+}
+
+.section--forest {
+  background: var(--forest-deep);
+  color: var(--bone);
+}
+.section--forest h1, .section--forest h2, .section--forest h3, .section--forest h4 {
+  color: var(--bone);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moss);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.section--forest .eyebrow {
+  color: var(--sage);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.h-display-1 {
+  font-size: clamp(2.2rem, 5.2vw, 3.6rem);
+}
+
+.h-display-2 {
+  font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+}
+
+.h-display-3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+}
+
+.lede {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--moss);
+  max-width: 52ch;
+}
+
+.section--forest .lede {
+  color: var(--sage);
+}
+
+.body-text {
+  color: #3c4a3d;
+  max-width: 62ch;
+}
+
+.section--forest .body-text {
+  color: #cdd7c3;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  padding: 15px 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  min-height: 52px;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--forest);
+  color: var(--bone);
+}
+.btn--primary:hover:not(:disabled) {
+  background: var(--forest-deep);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--forest);
+  border-color: var(--forest);
+}
+.btn--outline:hover:not(:disabled) {
+  background: rgba(36, 53, 42, 0.06);
+}
+
+.section--forest .btn--outline {
+  color: var(--bone);
+  border-color: var(--sage);
+}
+.section--forest .btn--outline:hover:not(:disabled) {
+  background: rgba(246, 242, 233, 0.08);
+}
+
+.btn--instagram {
+  background: transparent;
+  color: var(--forest);
+  border-color: var(--stone-line);
+}
+.btn--instagram:hover {
+  border-color: var(--moss);
+}
+.section--forest .btn--instagram {
+  color: var(--bone);
+  border-color: rgba(246, 242, 233, 0.35);
+}
+.section--forest .btn--instagram:hover {
+  border-color: var(--sage);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* --- Form fields --- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.section--forest .field label {
+  color: var(--bone);
+}
+
+.field input {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--stone-line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field input:focus {
+  border-color: var(--moss);
+}
+
+.field-error {
+  font-size: 13px;
+  color: #9c3b2f;
+}
+
+.field-hint {
+  font-size: 12px;
+  color: var(--moss);
+}
+
+.section--forest .field-hint {
+  color: var(--sage);
+}
+
+/* --- Cards / grid utilities --- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--stone-line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+

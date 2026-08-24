@@ -1,0 +1,74 @@
+.ingredients__grid {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .ingredients__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .ingredients__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ingredient-card {
+  border: 1px solid var(--stone-line);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  background: var(--paper);
+  position: relative;
+}
+
+.ingredient-card__role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.ingredient-card__name {
+  font-size: 1.15rem;
+  margin-block: 6px 8px;
+}
+
+.ingredient-card__note {
+  font-size: 14.5px;
+  color: #4a584b;
+}
+
+.ingredients__full {
+  margin-top: 40px;
+  border-top: 1px solid var(--stone-line);
+  padding-top: 24px;
+}
+
+.ingredients__toggle {
+  background: none;
+  border: none;
+  color: var(--forest);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px solid var(--forest);
+}
+
+.ingredients__full-list {
+  margin-top: 18px;
+  padding-left: 20px;
+  columns: 2;
+  gap: 24px;
+  color: #4a584b;
+  font-size: 14.5px;
+  line-height: 2;
+}
+
+@media (max-width: 560px) {
+  .ingredients__full-list {
+    columns: 1;
+  }
+}

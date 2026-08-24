@@ -1,0 +1,65 @@
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.waitlist-form--compact .field input {
+  padding: 12px 14px;
+}
+
+.waitlist-form__microcopy {
+  font-size: 12.5px;
+  color: var(--moss);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.section--forest .waitlist-form__microcopy {
+  color: var(--sage);
+}
+
+.waitlist-form--confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  border: 1px solid var(--stone-line);
+  text-align: center;
+}
+
+.section--forest .waitlist-form--confirmation {
+  background: rgba(246, 242, 233, 0.06);
+  border-color: rgba(246, 242, 233, 0.2);
+}
+
+.waitlist-form__confirm-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--forest);
+}
+
+.section--forest .waitlist-form__confirm-title {
+  color: var(--bone);
+}
+
+.waitlist-form__confirm-body {
+  color: #3c4a3d;
+}
+
+.section--forest .waitlist-form__confirm-body {
+  color: #cdd7c3;
+}
+
+.waitlist-form__confirm-next {
+  font-weight: 600;
+  color: var(--forest);
+  margin-top: 8px;
+}
+
+.section--forest .waitlist-form__confirm-next {
+  color: var(--bone);
+}
