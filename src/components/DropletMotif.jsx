@@ -28,7 +28,7 @@ export default function DropletMotif({ className = "" }) {
       controls={false}
       aria-label="Person applying Vinea Scalp Health & Hair Growth Oil"
     >
-      <source src="/videos/scalp-application.mp4.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/hylynzpo/video/upload/v1787587048/HeyGen_-_AI_Spokesperson_Video_Creator_6.mp4" type="video/mp4" />
     </video>
   );
 }

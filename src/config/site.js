@@ -24,7 +24,7 @@ export const BRAND = {
 // Drop real asset paths in /public/images and update these. Every <img> in
 // the app falls back gracefully if a path 404s (see components/ProductImage.jsx).
 export const IMAGES = {
-  heroProduct: '/images/hero-product.jpg',
+  heroProduct: 'https://res.cloudinary.com/hylynzpo/image/upload/v1787587046/product.png',
   productCloseUp: '/images/product-closeup.jpg',
   ugcCreatorMale: '/images/ugc-male.jpg',
   ugcCreatorFemale: '/images/ugc-female.jpg',
