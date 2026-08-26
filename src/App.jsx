@@ -1,3 +1,6 @@
+// Vercel Analytics
+import { Analytics } from "@vercel/analytics/react";
+// Vercel Analytics
 import Hero from './components/Hero';
 import PainPoint from './components/PainPoint';
 import Solution from './components/Solution';
@@ -33,6 +36,7 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+    <Analytics />  
     </>
   );
 }
